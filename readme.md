@@ -51,7 +51,7 @@
 
     Install nginx
     ```
-    yum amazon-linux-extras install nginx1.12
+    amazon-linux-extras install nginx1.12
     ```
     ```
     nginx -v
@@ -63,11 +63,6 @@
     ```
 
 5. Configure nginx for reverse proxy
-
-    Go to root directory
-    ```
-    cd /
-    ```
 
     Go to nginx directory
     ```
