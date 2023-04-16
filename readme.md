@@ -6,7 +6,7 @@
     formula command
     ```
     ssh -i "public_key" username@Public_IPv4_DNS
-    
+
     ```
     example command
     ```
@@ -120,7 +120,7 @@
 
     Use docker compose
     ```
-    docker compose up -d
+    docker-compose up -d
     ```
 
     Start nginx
