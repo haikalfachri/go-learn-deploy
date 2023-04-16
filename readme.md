@@ -107,25 +107,25 @@
 
 6. Use docker and nginx
 
-Start docker
-```
-service docker start
-```
+    Start docker
+    ```
+    service docker start
+    ```
 
-Get into go-learn-deploy directory
-```
-cd go-learn-deploy
-```
+    Get into go-learn-deploy directory
+    ```
+    cd go-learn-deploy
+    ```
 
-Use docker compose
-```
-docker compose up -d
-```
+    Use docker compose
+    ```
+    docker compose up -d
+    ```
 
-Start nginx
-```
-systemctl start nginx
-```
+    Start nginx
+    ```
+    systemctl start nginx
+    ```
 
 7. Open program in public IP Adress
 
