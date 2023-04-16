@@ -73,7 +73,38 @@
     git clone --single-branch --branch rds-connection https://github.com/hklfach/go-learn-deploy
     ```
 
-5. Configure nginx for reverse proxy
+5. Config db in ./drivers/mysql/mysql.go
+
+    Configure db in ./drivers/mysql/mysql.go
+
+    Change the config based on RDS DB config
+
+    Formula
+    ```
+    ...
+    config := Config{
+	  DB_Username: "{USERNAME}",
+	  DB_Password: "{PASSWORD}",
+	  DB_Port:     "{PORT}",
+	  DB_Host:     "{RDS_ENDPOINT}",
+	  DB_Name:     "{DATABASE_NAME}",
+	}
+    ...
+    ```
+    example
+    ```
+    ...
+    config := Config{
+	  DB_Username: "admin",
+	  DB_Password: "Haikal*18",
+	  DB_Port:     "3306",
+	  DB_Host:     "mysql-1.cmaggkp0ghea.ap-southeast-1.rds.amazonaws.com",
+	  DB_Name:     "crud_go",
+	}
+    ...
+    ```
+
+6. Configure nginx for reverse proxy
 
     Go to root directory
     ```
@@ -117,7 +148,7 @@
     ...
     ```
 
-6. Use docker, nginx and mysql server
+7. Use docker, nginx and mysql server
 
     Start docker
     ```
@@ -144,7 +175,7 @@
     systemctl start mysqld
     ```
 
-7. Open program in public IP Adress and Test API using Postman
+8. Open program in public IP Adress and Test API using Postman
 
     Example
     ```
