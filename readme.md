@@ -135,3 +135,9 @@
     http://18.136.126.223/
     ```
 
+
+### Backup mysqldump
+    ```
+    docker exec 4b1a5afef64f sh -c 'exec mysqldump --all-databases -uroot -p"password"' > migrate.sql
+    ```
+

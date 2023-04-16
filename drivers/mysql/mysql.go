@@ -22,7 +22,7 @@ func ConnectDB() *gorm.DB {
 	  DB_Username: "admin",
 	  DB_Password: "Haikal*18",
 	  DB_Port:     "3306",
-	  DB_Host:     "mysql-service",
+	  DB_Host:     "mysql-1.cmaggkp0ghea.ap-southeast-1.rds.amazonaws.com",
 	  DB_Name:     "crud_go",
 	}
   
