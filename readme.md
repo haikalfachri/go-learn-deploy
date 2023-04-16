@@ -57,6 +57,17 @@
     nginx -v
     ```
 
+    Install mysql server
+    ```
+    amazon-linux-extras install epel -y 
+    ```
+    ```
+    yum install https://dev.mysql.com/get/mysql80-community-release-el7-5.noarch.rpm 
+    ```
+    ```
+    yum install mysql-community-server
+    ```
+
 4. Clone repository
     ```
     git clone --single-branch --branch rds-connection https://github.com/hklfach/go-learn-deploy
@@ -92,7 +103,7 @@
         include /etc/nginx/default.d/*.conf;
 
         location / {
-                proxy_pass http://127.0.0.1:8080;
+                proxy_pass http://127.0.0.1:8000;
         }
 
         error_page 404 /404.html;
@@ -106,7 +117,7 @@
     ...
     ```
 
-6. Use docker and nginx
+6. Use docker, nginx and mysql server
 
     Start docker
     ```
@@ -128,19 +139,22 @@
     systemctl start nginx
     ```
 
-7. Open program in public IP Adress
+    Start mysql server
+    ```
+    systemctl start mysqld
+    ```
+
+7. Open program in public IP Adress and Test API using Postman
 
     Example
     ```
     http://18.136.126.223/
     ```
-
-
-### Backup mysqldump
+### Backup mysqldump for local migrate 
     ```
-    docker exec 4b1a5afef64f sh -c 'exec mysqldump --all-databases -uroot -p"password"' > migrate.sql
+    docker exec {CONTAINERID} sh -c 'exec mysqldump --all-databases -uroot -p"{DB_PASSWORD}"' > migrate.sql
     ```
 ### Connect EC2 instance to RDS
     ```
-    mysql -h mysql-1.cmaggkp0ghea.ap-southeast-1.rds.amazonaws.com -P 3306 -u admin -p
+    mysql -h {RDS_ENDPOINT} -P {PORT} -u {DB_USER} -p
     ```
