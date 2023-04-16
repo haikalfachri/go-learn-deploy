@@ -10,7 +10,7 @@
 
     Example command
     ```
-    ssh -i "Haikal_18.pem" ec2-user@ec2-13-229-134-70.ap-southeast-1.compute.amazonaws.com
+    ssh -i "Haikal_18.pem" ec2-user@ec2-18-136-126-223.ap-southeast-1.compute.amazonaws.com
     ```
 
 3. Install docker, docker-compose, git, and nginx
@@ -43,7 +43,7 @@
 
     Install docker-compose
     ```
-    curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/bin/docker-compose
+    curl -L https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m) -o /usr/bin/docker-compose && chmod +x /usr/bin/docker-compose
     ```
     ```
     docker-compose -v
@@ -51,7 +51,7 @@
 
     Install nginx
     ```
-    yum amazon-linux-extras install nginx1.12
+    amazon-linux-extras install nginx1.12
     ```
     ```
     nginx -v
@@ -59,7 +59,7 @@
 
 4. Clone repository
     ```
-    git clone https://github.com/hklfach/go-learn-deploy
+    git clone --single-branch --branch rds-connection https://github.com/hklfach/go-learn-deploy
     ```
 
 5. Configure nginx for reverse proxy
@@ -132,6 +132,6 @@
 
     Example
     ```
-    http://13.229.134.70/
+    http://18.136.126.223/
     ```
 
