@@ -62,6 +62,7 @@
     ```
 
 5. Configure nginx for reverse proxy
+
     Go to root directory
     ```
     cd /
@@ -105,6 +106,7 @@
     ```
 
 6. Use docker and nginx
+
 Start docker
 ```
 service docker start
