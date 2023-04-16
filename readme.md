@@ -2,6 +2,7 @@
 1. Open terminal (You can use CMD if using windows)
 
 2. Connect to instance (Different based on instance configure)
+
     formula command
     ```
     ssh -i "public_key" username@Public_IPv4_DNS
@@ -12,6 +13,7 @@
     ```
 
 3. Install docker, docker-compose, git, and nginx
+
     Get into super user mode
     ```
     sudo su
@@ -53,11 +55,12 @@
     ```
     nginx -v
     ```
+
 4. Clone repository
     ```
     git clone https://github.com/hklfach/go-learn-deploy
-
     ```
+
 5. Configure nginx for reverse proxy
     Go to root directory
     ```
