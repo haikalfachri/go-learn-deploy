@@ -6,8 +6,9 @@
     formula command
     ```
     ssh -i "public_key" username@Public_IPv4_DNS
+    
     ```
-
+    example command
     ```
     ssh -i "Haikal_18.pem" ec2-user@ec2-13-229-134-70.ap-southeast-1.compute.amazonaws.com
     ```
