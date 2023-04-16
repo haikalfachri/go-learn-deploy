@@ -140,4 +140,7 @@
     ```
     docker exec 4b1a5afef64f sh -c 'exec mysqldump --all-databases -uroot -p"password"' > migrate.sql
     ```
-
+### Connect EC2 instance to RDS
+    ```
+    mysql -h mysql-1.cmaggkp0ghea.ap-southeast-1.rds.amazonaws.com -P 3306 -u admin -p
+    ```
