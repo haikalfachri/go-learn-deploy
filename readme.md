@@ -150,11 +150,9 @@
     ```
     http://18.136.126.223/
     ```
-### Backup mysqldump for local migrate 
-    ```
+### Backup mysqldump for local migrate
+
     docker exec {CONTAINERID} sh -c 'exec mysqldump --all-databases -uroot -p"{DB_PASSWORD}"' > migrate.sql
-    ```
 ### Connect EC2 instance to RDS
-    ```
+    
     mysql -h {RDS_ENDPOINT} -P {PORT} -u {DB_USER} -p
-    ```
