@@ -1,7 +1,7 @@
 ### Notes
-main/master branch is for EC2 only
+- main/master branch is for EC2 only
 
-rds-connection branch is for EC2 and RDS simultaneously
+- rds-connection branch is for EC2 and RDS simultaneously
 
 ### Steps
 1. Open terminal (You can use CMD if using windows)
