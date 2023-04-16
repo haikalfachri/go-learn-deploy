@@ -19,8 +19,8 @@ type Config struct {
   
 func ConnectDB() *gorm.DB {
 	config := Config{
-	  DB_Username: "root",
-	  DB_Password: "password",
+	  DB_Username: "admin",
+	  DB_Password: "Haikal*18",
 	  DB_Port:     "3306",
 	  DB_Host:     "mysql-service",
 	  DB_Name:     "crud_go",
