@@ -1,5 +1,6 @@
 ### Notes
 main/master branch is for EC2 only
+
 rds-connection branch is for EC2 and RDS simultaneously
 
 ### Steps
