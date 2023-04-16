@@ -3,12 +3,12 @@
 
 2. Connect to instance (Different based on instance configure)
 
-    formula command
+    Formula command
     ```
     ssh -i "public_key" username@Public_IPv4_DNS
     ```
 
-    example command
+    Example command
     ```
     ssh -i "Haikal_18.pem" ec2-user@ec2-13-229-134-70.ap-southeast-1.compute.amazonaws.com
     ```
@@ -79,7 +79,7 @@
     nano nginx.conf
     ```
 
-    Comment root variable in line 42 and add proxy_pass in location {}
+    Comment root variable in line 42 and add proxy_pass inside location {}
     ```
     ...
      server {
@@ -129,4 +129,9 @@
     ```
 
 7. Open program in public IP Adress
+
+    Example
+    ```
+    http://13.229.134.70/
+    ```
 
